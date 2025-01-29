@@ -18,6 +18,7 @@ inits = init_grid(10, 10, 1)
 S_lists = [
     evolution(S, Q, K, V, rhs=rhs_trad, step_size=0.3, tol_low=1e-5)[0] for S in inits
 ]
+inits = init_grid(10, 10, 1)
 S_lists_L2 = [
     evolution(S, Q, K, V, rhs=rhs_L2, step_size=0.3, tol_low=1e-5)[0] for S in inits
 ]
