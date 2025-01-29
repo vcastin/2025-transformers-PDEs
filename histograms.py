@@ -94,7 +94,7 @@ K_list = [-Q for Q in Q_list]
 rank_lists_L2 = []
 # %% V = I_d
 print("V = I_d")
-step_size_list = [0.09, 0.06, 0.02]  # [0.02, 0.015, 0.01]
+step_size_list = [0.09, 0.06, 0.02]
 rank_lists_id, exceptions = create_histograms(
     dimensions,
     Q_list,
@@ -113,7 +113,7 @@ rank_lists_L2 += rank_lists_id
 # %% V random
 np.random.seed(27)
 print("V random")
-step_size_list = [0.15, 0.15, 0.15]  # [0.15, 0.06, 0.15]
+step_size_list = [0.15, 0.15, 0.15]
 V_list = [np.random.randn(d, d) for d in dim_repeated]
 V_list = [np.dot(V.T, V) for V in V_list]
 rank_lists_V, exceptions = create_histograms(
